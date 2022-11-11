@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import logo from '../header/assets/images/logo.svg';
 
 const Search = () => {
+    window.addEventListener('scroll', function() {
+        const search = this.document.querySelector('.search')
+        search.classList.toggle('active', window.scrollY > 100)
+    })
     return (
         <>
             <section className="search">
@@ -18,7 +22,7 @@ const Search = () => {
                     </div>
 
                     <div className="icon f_flex width">
-                        <i className="fa fa-user icon_circle"></i>
+                        <i className="fa fa-user icon-circle"></i>
                         <div className="cart">
                             <Link to='/cart'>
                                 <i className="fa fa-shopping-bag icon-circle"></i>
