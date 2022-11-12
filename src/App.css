@@ -102,3 +102,18 @@ button {
   background-color: rgb(220, 211, 228);
   cursor: pointer;
 }
+.btn-primary {
+  background-color: rgb(87, 24, 146);
+  padding: 13px 40px;
+  font-weight: bold;
+  color: #ffff;
+  border-radius: 5px;
+}
+.btn-primary:hover {
+  background-color:rgb(200, 162, 212) ;
+  color: rgb(87, 24, 146);
+  transition: .5s;
+}
+.top {
+  margin-top: 80px;
+}
