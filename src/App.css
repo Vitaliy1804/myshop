@@ -4,6 +4,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #ffff;
@@ -11,7 +14,7 @@ body {
 }
 
 .background {
-  background-color: aquamarine;
+  background-color: rgb(240, 226, 241);
   padding: 50px 0;
 }
 .container {
@@ -111,9 +114,60 @@ button {
 }
 .btn-primary:hover {
   background-color:rgb(200, 162, 212) ;
-  color: rgb(87, 24, 146);
-  transition: .5s;
+  border: 2px solid rgb(87, 24, 146);
+  color:rgb(87, 24, 146);
+  transition: ease-in .3s;
 }
 .top {
   margin-top: 80px;
+}
+.mtop {
+  margin-top: 40px;
+}
+
+/*------*/
+.heading i {
+  color: rgb(165, 93, 232);
+  margin: 10px;
+}
+.discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e94560;
+  padding: 3px 10px;
+  font-size: 12px;
+  border-radius: 50px;
+  color: #fff;
+  margin: 10px;
+}
+
+/*----------product----------*/
+.product {
+  background: #ffff;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: rgb(3 0 71 / 9%) 0 1px 3px;
+  margin: 10px;
+}
+.product h3 {
+  font-weight: 400;
+  font-size: 17px;
+}
+.product .rate i {
+  font-size: 15px;
+  color:#ebd619;
+  margin: 5px 5px 5px 0;
+}
+.product .price {
+  display: flex;
+  justify-content: space-between;
+  color:#e94560;
+}
+.product button {
+  background-color: none;
+  color:#e94560;
+  font-size: 20px;
+  border: 1px solid rgb(3 0 71 / 9%);
 }
