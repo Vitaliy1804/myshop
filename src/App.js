@@ -23,6 +23,18 @@ function App() {
     }
   }
 
+  const decreaseQty = (product) => {
+    const productExist = cartItem.find((item) => item.id === product.id)
+
+    if (productExist.qty === 1) {
+      setCardItem(cartItem.filter((item) => item.id !== product.id))
+    } else {
+      setCardItem(cartItem.map((item) => (item.id === product.id 
+        ? {... productExist, qty: productExist.qty - 1} 
+        : item)))
+    }
+  }
+
   return (
     <>
     <Router>
@@ -32,7 +44,11 @@ function App() {
           <Pages productItems={productItems} addToCart={addToCart} />
         </Route>
         <Route path='/cart' exact>
-          <Cart cartItem={cartItem} addToCart={addToCart} />
+          <Cart 
+          cartItem={cartItem} 
+          addToCart={addToCart} 
+          decreaseQty={decreaseQty}
+          />
         </Route>
       </Switch>
     </Router>
