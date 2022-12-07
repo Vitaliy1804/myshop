@@ -4,11 +4,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Pages from './pages/Pages';
 import Cart from './common/header/cart/Cart';
 import Data from './components/flashDeals/Data';
+import Sdata from './components/shop/Sdata';
 import { useState } from "react";
 
 function App() {
   const { productItems } = Data;
-
+  const {shopItems} = Sdata;
   const [cartItem, setCardItem] = useState([]);
 
   const addToCart = (product) => {
@@ -41,7 +42,11 @@ function App() {
       <Header cartItem={cartItem}/>
       <Switch>
         <Route path='/' exact>
-          <Pages productItems={productItems} addToCart={addToCart} />
+          <Pages 
+          productItems={productItems} 
+          addToCart={addToCart} 
+          shopItems={shopItems}
+          />
         </Route>
         <Route path='/cart' exact>
           <Cart 
