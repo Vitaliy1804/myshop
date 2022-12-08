@@ -19,6 +19,7 @@ const Pages = ({productItems, cartItem, addToCart, shopItems}) => {
         <Shop shopItems={shopItems} addToCart={addToCart}/>
         <Annts />
         <Wrapper />
+        
         </>
     )
 }
